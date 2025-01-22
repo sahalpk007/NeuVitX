@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "348473160163",
+    "firebase_url": "https://neuvitx-default-rtdb.firebaseio.com",
+    "project_id": "neuvitx",
+    "storage_bucket": "neuvitx.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:348473160163:android:12c6acb64bc26f7cb870d6",
+        "android_client_info": {
+          "package_name": "com.example.neuvitx"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBN84n6sOmCkvBteHkiMaHuEPvlkllgK2U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

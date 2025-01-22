@@ -1,0 +1,60 @@
+import 'package:flutter/material.dart';
+
+class AddPatientPage extends StatefulWidget {
+  const AddPatientPage({Key? key}) : super(key: key);
+
+  @override
+  _AddPatientPageState createState() => _AddPatientPageState();
+}
+
+class _AddPatientPageState extends State<AddPatientPage> {
+  final _formKey = GlobalKey<FormState>();
+  String _name = '';
+  String _condition = '';
+  String _photoUrl = '';
+
+  void _addPatient() {
+    if (_formKey.currentState!.validate()) {
+      // Logic to add patient to Firestore would go here
+      Navigator.pop(context); // Navigate back after adding patient
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Add Patient')),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Form(
+          key: _formKey,
+          child: Column(
+            children: [
+              TextFormField(
+                decoration: const InputDecoration(labelText: 'Name'),
+                onSaved: (value) {
+                  _name = value ?? '';
+                },
+              ),
+              TextFormField(
+                decoration: const InputDecoration(labelText: 'Condition'),
+                onSaved: (value) {
+                  _condition = value ?? '';
+                },
+              ),
+              TextFormField(
+                decoration: const InputDecoration(labelText: 'Photo URL'),
+                onSaved: (value) {
+                  _photoUrl = value ?? '';
+                },
+              ),
+              ElevatedButton(
+                onPressed: _addPatient,
+                child: const Text('Add Patient'),
+              ),            ],
+          ),
+        ),
+      ),
+    );
+  }
+}

@@ -1,0 +1,56 @@
+name: main_project_2024
+description: "A new Flutter project connected to Firebase."
+publish_to: 'none' # This is for private projects; remove if you plan to publish
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.3 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+  fl_chart: ^0.40.0
+  flutter_cube: ^0.1.1  # 3D object rendering, ensure this package is necessary for your project
+  charts_flutter: ^0.12.0  # For charts and data visualization
+  audioplayers: ^6.1.0  # For playing audio files
+  intl: ^0.17.0  # For date/time and number formatting
+
+  # Firebase dependencies
+  firebase_core: ^2.14.0   # Core dependency for Firebase
+  firebase_auth: ^4.20.0   # Firebase Authentication (compatible version)
+  cloud_firestore: ^4.17.5  # Downgraded Firebase Firestore version for compatibility
+  firebase_storage: ^11.0.0  # Firebase Storage for handling media
+  font_awesome_flutter: ^10.2.0
+  image_picker: ^0.8.5+3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0  # Linter for better code practices
+
+flutter:
+  uses-material-design: true
+
+  # Asset declarations
+  assets:
+    - assets/images/bg.jpg
+    - assets/images/logo.png
+    - assets/images/login.jpg
+    - assets/images/dip.jpg
+    - assets/images/fn.jpg
+    - assets/models/glucose.obj
+    - assets/alarm.mp3
+    - assets/alarm2.mp3
+    - assets/rabe.mp3
+    - assets/facebook.png
+    - assets/google.jpeg
+
+  # Fonts can be added in this section if needed:
+  # fonts:
+  #   - family: CustomFont
+  #     fonts:
+  #       - asset: fonts/CustomFont-Regular.ttf
+  #       - asset: fonts/CustomFont-Bold.ttf
+  #         weight: 700
