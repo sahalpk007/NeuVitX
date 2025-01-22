@@ -24,7 +24,7 @@ class _HomePageState extends State<HomePage> {
         bool isSelected = (doc.id == selectedPatientId);
         batch.update(doc.reference, {'isMonitoringEnabled': isSelected});
       }
-
+// nh/
       // Commit the batch update
       await batch.commit();
     } catch (e) {
